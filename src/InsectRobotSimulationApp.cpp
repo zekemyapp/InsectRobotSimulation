@@ -5,6 +5,7 @@
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
+#include "cinder/CinderImGui.h"
 #include "Node.h"
 #include "Leg.h"
 #include "DebugRenderer.h"
@@ -13,7 +14,7 @@
 #include "ModelConfigGui.h"
 #include "ModelControl.h"
 #include "ModelControlGui.h"
-#include "CinderImGui.h"
+
 #include "Model.h"
 #include "cinder/Serial.h"
 
@@ -24,6 +25,8 @@
 using namespace ci;
 using namespace ci::app;
 using namespace std;
+
+namespace ui = ImGui;
 
 union U {
 	int16_t s;
@@ -130,7 +133,7 @@ void InsectRobotSimulationApp::setup()
 	setWindowPos(0, 0);
 	gl::enableVerticalSync();
 	setFrameRate(30);
-	ui::initialize();
+	ui::Initialize();
 	ui::GetStyle().WindowRounding = 0.0f;
 	ui::GetStyle().ChildRounding = 0.0f;
 	ui::GetStyle().FrameRounding = 0.0f;
