@@ -1,9 +1,11 @@
 #include "DebugRenderer.h"
 #include "MeshPool.h"
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
 using namespace ci;
 using namespace ci::app;
 using namespace std;
+
+namespace ui = ImGui;
 
 void DebugRenderer::setup(NodeRef root, Model *model)
 {

@@ -1,5 +1,8 @@
 #include "ModelControlGui.h"
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
+
+namespace ui = ImGui;
+
 void ModelControlGui::setup(ModelControl * _control) 
 {
 	control = _control;

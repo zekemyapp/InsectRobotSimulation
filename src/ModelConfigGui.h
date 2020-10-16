@@ -4,11 +4,11 @@ class ModelConfigGui
 {
 
 public:
-	ModelConfigGui() {};
+	ModelConfigGui()
+		:config(nullptr) 
+	{};
 	void setup(ModelConfig * config);
 	void show();
 
 	ModelConfig * config;
-
-
 };
